@@ -1,4 +1,7 @@
-#include "main."
+#include "main.h"
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 /**
  * display_prompt - Check if stdin/ standard input stream is connected to
