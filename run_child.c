@@ -6,7 +6,7 @@
  * @command_path: Full path of the command to execute.
  * @command_args: Arguments of the command.
  * Return: Exit status of the command.
- * 
+ *
  * This function creates a child process using fork(), and in child process,
  * executes the specified command using execve(). If execution fails, the child
  * process exits with failure status. In the parent process, it waits for the
@@ -37,14 +37,13 @@ int run_child(char *path_env, char *command_path, char **command_args)
 	else
 	{
 		/* In parent process, wait for child process to complete */
-		do
-		{
+		do{
 			wait_status = waitpid(child_pid, &exit_status, WUNTRACED);
 		} while (!WIFEXITED(exit_status) && !WIFSIGNALED(exit_status));
 	}
 	/* Ignore the wait_status variable to prevent compiler warnings */
 	(void) wait_status;
-	
+
 	/* Return the exit status of the executed command */
-	return exit_status;
+	return (exit_status);
 }
