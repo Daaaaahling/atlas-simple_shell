@@ -28,6 +28,12 @@ int run_child(char *path_env, char *command_path, char **command_args)
 
 	if (child_pid == 0)
 	{
+		/*trying to change the directory executions works*/
+		if (chdir("./") == -1)
+		{
+            perror("chdir");
+            exit(EXIT_FAILURE);
+        }
 		/* In child process, execute the command */
 		if (execve(command_path, command_args, NULL) == -1)
 			exit(EXIT_FAILURE); /* Exit if execution fails */

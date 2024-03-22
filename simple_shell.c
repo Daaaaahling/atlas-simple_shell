@@ -38,10 +38,7 @@ int main(int argc, char **argv, char **env)
 		split_string(path, ":", paths);
 
 		/* Display prompt */
-		if (display_prompt() != 0)
-		{
-			break; /* Break loop if not connected to a terminal */
-		}
+		
 
 		/* Get user input */
 		if (getline(&input, &size, stdin) == -1)
