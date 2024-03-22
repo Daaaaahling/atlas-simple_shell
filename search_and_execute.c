@@ -36,7 +36,7 @@ int search_and_execute(char *path_env, char **dirs, char **args)
         if (stat(full_path, &file_stat) == 0)
         {
             /* If file exists, execute the command */
-            execute_command(path_env, full_path, args);
+            run_child(path_env, full_path, args);
             free(full_path);
             return (0);
         }
