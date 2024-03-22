@@ -10,23 +10,23 @@
  */
 char *copy_string(char *original)
 {
-       	int index = 0;
+	int index = 0;
 	int length = 0;
 	char *duplicate;
-	
+
 	/* Check if the original string is NULL */
 	if (original == NULL)
 		return (NULL);
-	
+
 	/* Calculate the length of the original string */
-	
+
 	while (original[index] != '\0')
 	{
 		index++;
 		length++;
 	}
 	length++;
-	
+
 	/* Allocate memory for the duplicated string */
 	duplicate = malloc(length * sizeof(char));
 	/* Check if memory allocation was successful */
