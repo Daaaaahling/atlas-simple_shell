@@ -6,7 +6,8 @@
  * Return: Pointer to the duplicated string,
  * or NULL if memory allocation fails.
  *
- * This function duplicates the input string and returns a pointer to the copy.
+ * Description: This function duplicates the input string and returns
+ * a pointer to the copy.
  */
 char *copy_string(char *original)
 {

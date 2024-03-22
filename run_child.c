@@ -5,12 +5,14 @@
  * @path_env: The PATH environment variable (freed in function).
  * @command_path: Full path of the command to execute.
  * @command_args: Arguments of the command.
- * Return: Exit status of the command.
  *
- * This function creates a child process using fork(), and in child process,
- * executes the specified command using execve(). If execution fails, the child
- * process exits with failure status. In the parent process, it waits for the
+ * Description: This function creates a child process using fork(), and in 
+ * child process, executes the specified command using execve().
+ * If execution fails, the child process exits with failure status.
+ * In the parent process, it waits for the
  * child process to complete and returns the exit status of  executed command.
+ *
+ * Return: Exit status of command
  */
 int run_child(char *path_env, char *command_path, char **command_args)
 {
