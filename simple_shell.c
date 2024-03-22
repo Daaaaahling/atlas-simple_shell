@@ -58,7 +58,7 @@ int simple_shell(int argc, char **argv, char **env)
 		if (!tokens[0])
 		{
 			free(path);
-			continue; /* Empty input, continue to next iteration *
+			continue; /* Empty input, continue to next iteration */
 		}
 		if (strcmp(tokens[0], "exit") == 0)
 		{
