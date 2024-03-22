@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * simple_shell - Entry point of the simple shell.
+ * main - Entry point of the simple shell.
  * @argc: Argument count.
  * @argv: Argument vector.
  * @env: Environment variables.
  * Return: Exit status.
  */
-int simple_shell(int argc, char **argv, char **env)
+int main(int argc, char **argv, char **env)
 {
 	char *input = NULL, *path = NULL;
 	size_t size = 0;
