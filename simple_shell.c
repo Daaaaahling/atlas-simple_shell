@@ -62,7 +62,6 @@ int simple_shell(int argc, char **argv, char **env)
 		}
 		if (strcmp(tokens[0], "exit") == 0)
 		{
-			/* Exit command */
 			free(input);
 			free(path);
 			exit(EXIT_SUCCESS);
