@@ -53,7 +53,7 @@ int main(int argc, char **argv, char **env)
 		}
 		/* Tokenize user input */
 		split_string(input, " \n\t\r", tokens);
-		
+
 		/* Check for built-in commands or external commands */
 		if (!tokens[0])
 		{
