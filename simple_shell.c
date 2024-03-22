@@ -68,7 +68,6 @@ int simple_shell(int argc, char **argv, char **env)
 		}
 		if (strcmp(tokens[0], "env") == 0)
 		{
-			/* Display environment variables */
 			for (i = 0; env[i] != NULL; i++)
 			{
 				write(STDOUT_FILENO, env[i], strlen(env[i]));
@@ -78,13 +77,10 @@ int simple_shell(int argc, char **argv, char **env)
 			continue;
 		}
 		
-		/* Check if the command is executable */
 		if (access(tokens[0], X_OK) == 0)
 			run_child(path, tokens[0], tokens);
 		else
 			exit_status = search_and_execute(path, paths, tokens);
 	}
-	
-	/* Clean up and return exit status */
 	return (exit_status);
 }
