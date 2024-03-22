@@ -37,7 +37,7 @@ int run_child(char *path_env, char *command_path, char **command_args)
 	else
 	{
 		/* In parent process, wait for child process to complete */
-		do{
+		do {
 			wait_status = waitpid(child_pid, &exit_status, WUNTRACED);
 		} while (!WIFEXITED(exit_status) && !WIFSIGNALED(exit_status));
 	}
