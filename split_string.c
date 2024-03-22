@@ -6,8 +6,8 @@
  * @delimiters: The delimiters used for tokenization.
  * @tokens: Array to store the tokens.
  * 
- * This function tokenizes the input string using the provided delimiters
- * and stores the tokens in the specified array.
+ * Description: This function tokenizes the input string using the provided
+ * delimiters and stores the tokens in the specified array.
  *
  * Return: void
  */

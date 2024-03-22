@@ -7,7 +7,7 @@
  * @dirs: Directories to search for the command.
  * @args: Arguments of the command.
  *
- * This function searches for the specified command in each directory
+ * Description: This function searches for the command in each directory
  * listed in the PATH environment variable. If the command is found,
  * it is executed. If the command is not found in any directory,
  * returns exit status 127 (command not found).
@@ -25,6 +25,7 @@ int search_and_execute(char *path_env, char **dirs, char **args)
 	{
 		/* Construct full path by concatenating directory and command */
 		full_path = malloc(strlen(args[0]) + strlen(dirs[idx]) + 2);
+
 		if (full_path == NULL)
 			exit(EXIT_FAILURE);
 
