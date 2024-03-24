@@ -5,7 +5,7 @@
  * @string: The string to tokenize.
  * @delimiters: The delimiters used for tokenization.
  * @tokens: Array to store the tokens.
- * 
+ *
  * Description: This function tokenizes the input string using the provided
  * delimiters and stores the tokens in the specified array.
  *
@@ -17,7 +17,7 @@ void split_string(char *string, char *delimiters, char **tokens)
 	char *token = strtok(string, delimiters);
 	/* Initialize index to track position in the 'tokens' array */
 	int index = 0;
-	
+
 	/* Continue tokenizing until there are no more tokens */
 	while (token != NULL)
 	{

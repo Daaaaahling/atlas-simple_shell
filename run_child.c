@@ -6,7 +6,7 @@
  * @command_path: Path of the command to execute.
  * @command_args: Arguments of the command.
  *
- * Description: This function creates a child process using fork(), and in 
+ * Description: This function creates a child process using fork(), and in
  * child process, executes the specified command using execve().
  * If execution fails, the child process exits with failure status.
  * In the parent process, it waits for the
@@ -30,9 +30,9 @@ int run_child(char *path_env, char *command_path, char **command_args)
 	{
 		if (chdir("./") == -1)
 		{
-            perror("chdir");
-            exit(EXIT_FAILURE);
-        }
+			perror("chdir");
+			exit(EXIT_FAILURE);
+		}
 		/* In the child process, execute the command */
 		if (execve(command_path, command_args, NULL) == -1)
 			exit(EXIT_FAILURE); /* Exit if execution fails */
