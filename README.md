@@ -40,7 +40,8 @@ git clone https://github.com/Daaaaahling/atlas-simple_shell.git
 
 Compile
 ```bash
-gcc -o hsh simple_shell.c run_child.c search_and_execute.c copy_string.c display_prompt.c split_string.c
+gcc -o hsh copy_string.c display_env.c display_prompt.c get_user_input.c handle_command.c init_shell.c run_child.c search_and_execute.c simple_shell.c split_string.c main.h
+
 
 ```
 
