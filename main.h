@@ -16,6 +16,7 @@ void display_prompt(void);
 int run_child(char *path_env, char *command_path, char **command_args);
 int search_and_execute(char *path_env, char **dirs, char **args);
 void split_string(char *string, char *delimiters, char **tokens);
+void display_env(char **env);
 int get_user_input(char **input, size_t *size);
 int handle_command(char **env, char **path, char **paths, char **tokens);
 void init_shell(char **env, char **path, char **paths);
