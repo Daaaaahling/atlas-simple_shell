@@ -12,7 +12,7 @@
  * it is executed. If the command is not found in any directory,
  * returns exit status 127 (command not found).
  *
- * Returns: Exit status of the command.
+ * Return: Exit status of the command.
  */
 int search_and_execute(char *path_env, char **dirs, char **args)
 {
