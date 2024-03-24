@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * get_user_input - Get input from the user
  * @input: pointer to store the input string

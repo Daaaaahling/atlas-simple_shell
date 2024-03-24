@@ -18,5 +18,5 @@ void init_shell(char **env, char **path, char **paths)
 		}
 		i++;
 	}
-	split_string(path, ":", paths);
+	split_string(*path, ":", paths);
 }

@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h> /* printf/input output functions */
+#include <stdio.h> /* input output functions */
 #include <unistd.h> /* STDIN_FILENO, isatty, access, fork, execve, getpid */
 #include <stdlib.h> /* memory and EXIT_SUCCESS/EXIT_FAILURE*/
 #include <string.h> /* string functions*/
@@ -9,6 +9,7 @@
 #include <sys/stat.h> /* For stat() */
 #include <sys/types.h> /* For pid_t */
 #include <sys/wait.h> /* For waitpid() */
+#include <stddef.h> /* For size_t */
 
 char *copy_string(char *original);
 void display_prompt(void);
