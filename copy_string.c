@@ -4,7 +4,7 @@
  * copy_string - Creates a duplicate of a string.
  * @original: The string to be duplicated.
  * Return: Pointer to the duplicated string,
- * or NULL if memory allocation fails.
+ * or NULL if memory allocation fails or if original string is NULL
  *
  * Description: This function duplicates the input string and returns
  * a pointer to the copy.
@@ -20,7 +20,6 @@ char *copy_string(char *original)
 		return (NULL);
 
 	/* Calculate the length of the original string */
-
 	while (original[index] != '\0')
 	{
 		index++;
