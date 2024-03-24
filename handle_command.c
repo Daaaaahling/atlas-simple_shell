@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * handle_command - Handle user commands
  * @env: environment variables

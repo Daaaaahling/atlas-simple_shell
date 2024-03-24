@@ -20,14 +20,14 @@ int main(int argc, char **argv, char **env)
 
 	while (1)
 	{
-		display_prompt();
-
 		if (get_user_input(&input, &size) == -1)
 		{
 			free(input);
 			free(path);
 			exit(EXIT_SUCCESS);
 		}
+
+		display_prompt();
 
 		/* Tokenize user input */
 		split_string(input, " \n\t\r", tokens);

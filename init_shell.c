@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * init_shell - Initialize the shell environment
  * @env: environment variables

@@ -11,7 +11,7 @@
 #include <sys/wait.h> /* For waitpid() */
 
 char *copy_string(char *original);
-int display_prompt(void);
+void display_prompt(void);
 int run_child(char *path_env, char *command_path, char **command_args);
 int search_and_execute(char *path_env, char **dirs, char **args);
 void split_string(char *string, char *delimiters, char **tokens);
