@@ -13,7 +13,7 @@
  */
 void split_string(char *string, char *delimiters, char **tokens)
 {
-	/* Use strtok to get the first token in the string */
+	/* Get the first token in the string */
 	char *token = strtok(string, delimiters);
 	/* Initialize index to track position in the 'tokens' array */
 	int index = 0;

@@ -2,8 +2,8 @@
 
 /**
  * run_child - Executes a command in a child process.
- * @path_env: The PATH environment variable (freed in function).
- * @command_path: Full path of the command to execute.
+ * @path_env: The PATH environment variable.
+ * @command_path: Path of the command to execute.
  * @command_args: Arguments of the command.
  *
  * Description: This function creates a child process using fork(), and in 
@@ -12,7 +12,7 @@
  * In the parent process, it waits for the
  * child process to complete and returns the exit status of  executed command.
  *
- * Return: Exit status of command
+ * Return: Exit status of command.
  */
 int run_child(char *path_env, char *command_path, char **command_args)
 {
@@ -28,13 +28,12 @@ int run_child(char *path_env, char *command_path, char **command_args)
 
 	if (child_pid == 0)
 	{
-		/*trying to change the directory executions works*/
 		if (chdir("./") == -1)
 		{
             perror("chdir");
             exit(EXIT_FAILURE);
         }
-		/* In child process, execute the command */
+		/* In the child process, execute the command */
 		if (execve(command_path, command_args, NULL) == -1)
 			exit(EXIT_FAILURE); /* Exit if execution fails */
 	}
@@ -44,12 +43,12 @@ int run_child(char *path_env, char *command_path, char **command_args)
 	}
 	else
 	{
-		/* In parent process, wait for child process to complete */
+		/* In the parent process, wait for child process to complete */
 		do {
 			wait_status = waitpid(child_pid, &exit_status, WUNTRACED);
 		} while (!WIFEXITED(exit_status) && !WIFSIGNALED(exit_status));
 	}
-	/* Ignore the wait_status variable to prevent compiler warnings */
+	/* Ignore the wait_status variable to prevent warnings */
 	(void) wait_status;
 
 	/* Return the exit status of the executed command */
