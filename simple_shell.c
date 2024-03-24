@@ -16,10 +16,10 @@ int main(int argc, char **argv, char **env)
 	(void)argc;
 	(void)argv;
 
-	init_shell(env, &path, paths);
-
 	while (1)
 	{
+		init_shell(env, &path, paths);
+
 		display_prompt();
 
 		if (get_user_input(&input, &size) == -1)
