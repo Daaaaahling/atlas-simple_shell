@@ -87,5 +87,4 @@ Run the compiled executable
 
 Enter the commands in the shell and observe the output:
 
-![image](https://github.com/Daaaaahling/atlas-simple_shell/assets/155494852/abcb8f52-0a48-4257-bb93-8f276a1bd1a8)
-
+![image](https://github.com/Daaaaahling/atlas-simple_shell/assets/155494852/24356958-2e4f-488f-bd3f-a09fb189787a)
