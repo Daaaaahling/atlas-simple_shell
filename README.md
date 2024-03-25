@@ -1,4 +1,4 @@
-# Atlas Simple Shell
+# Atlas Simple Shell🐚
 
 ## Description:
 
