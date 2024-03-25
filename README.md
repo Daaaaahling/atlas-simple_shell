@@ -31,6 +31,14 @@ This file contains the implementation of the search_and_execute function, which 
 ### split_string.c
 This file contains the implementation of the split_string function, which tokenizes a string using specified delimiters.
 
+### display_env.c
+
+### get_user_input.c 
+
+### init_shell.c 
+
+###  handle_command.c
+
 ## Usage
 
 Clone this repository
@@ -52,9 +60,7 @@ Run the compiled executable
 
 Enter the commands in the shell and observe the output:
 
-```bash
-root@f287a09866ef483182aa1a48a71fb07b-2377118072:~/atlas-simple_shell# ./hsh
-$ /bin/ls
+![image](https://github.com/Daaaaahling/atlas-simple_shell/assets/155494852/abcb8f52-0a48-4257-bb93-8f276a1bd1a8)
 AUTHORS    copy_string.c     hsh     man_1_simple_shell  search_and_execute.c  split_string.c
 README.md  display_prompt.c  main.h  run_child.c         simple_shell.c
 $ 
