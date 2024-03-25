@@ -68,19 +68,37 @@ If the command is found, it is executed using the run_child function. If the com
 
 ## Usage
 
-Clone this repository
+Clone this repository:
+
 ```bash
 git clone https://github.com/Daaaaahling/atlas-simple_shell.git
 ```
 
-Compile
+Compile your scripts:
+
 ```bash
-gcc -o hsh copy_string.c display_env.c display_prompt.c get_user_input.c handle_command.c init_shell.c run_child.c search_and_execute.c simple_shell.c split_string.c main.h
-
-
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -o hsh copy_string.c display_env.c display_prompt.c get_user_input.c handle_command.c init_shell.c run_child.c search_and_execute.c simple_shell.c split_s
+tring.c main.h
 ```
+gcc: Invokes the GNU Compiler Collection (GCC) to compile C code.
 
-Run the compiled executable
+-Wall: Enables most warning messages.
+
+-Werror: Treats all warnings as errors.
+
+-Wextra: Enables additional warning messages.
+
+-pedantic: Issues warnings about non-standard language constructs.
+
+-std=gnu89: Sets the C language standard to GNU C89.
+
+-o hsh: Specifies the output file name as hsh.
+
+copy_string.c display_env.c display_prompt.c get_user_input.c handle_command.c init_shell.c run_child.c search_and_execute.c simple_shell.c split_string.c main.h: Specifies the source files and the header file to be compiled.
+
+
+Run the compiled executable:
+
 ```bash
 ./hsh
 ```
